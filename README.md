@@ -2,7 +2,7 @@
 
 **Une solution professionnelle et flexible pour la gestion d'événements sur WordPress.**
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![License](https://img.shields.io/badge/license-Creative%20Commons%20BY--NC-green.svg) ![Author](https://img.shields.io/badge/author-Viry%20Brandon-orange.svg)
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![License](https://img.shields.io/badge/license-MIT-green.svg) ![Author](https://img.shields.io/badge/author-Viry%20Brandon-orange.svg)
 
 ---
 

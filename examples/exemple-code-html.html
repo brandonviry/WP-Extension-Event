@@ -1,0 +1,83 @@
+<!-- EXEMPLE COMPLET D'INTÉGRATION -->
+<!-- Copiez ce code dans un bloc HTML ou Code de votre builder pour tester si vous n'avez pas envie de tout faire à la main -->
+
+<!-- 1. EXEMPLE DE TEMPLATE DE CARTE (Design "Card UI") -->
+<!-- Ce design simule ce que vous feriez visuellement avec des colonnes et des blocs -->
+<div style="border: 1px solid #ddd; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.1); height: 100%; display: flex; flex-direction: column;">
+    
+    <!-- Image avec lien (Background possible avec [wpee_image_url]) -->
+    <div style="height: 200px; overflow: hidden; position: relative;">
+        <a href="[wpee_event_url]">
+            [wpee_image] <!-- L'image s'adapte automatiquement grâce au CSS du plugin -->
+        </a>
+        <!-- Badge de prix par dessus l'image -->
+        <div style="position: absolute; top: 10px; right: 10px; background: #000; color: #fff; padding: 5px 10px; border-radius: 20px; font-weight: bold; font-size: 0.8rem;">
+            [wpee_price]
+        </div>
+    </div>
+
+    <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column;">
+        <!-- Catégorie -->
+        <div style="text-transform: uppercase; color: #666; font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 5px;">
+            [wpee_tag]
+        </div>
+
+        <!-- Titre -->
+        <h3 style="margin: 0 0 10px 0; font-size: 1.25rem;">
+            <a href="[wpee_event_url]" style="text-decoration: none; color: #111;">[wpee_title]</a>
+        </h3>
+
+        <!-- Méta (Date & Lieu) -->
+        <div style="display: flex; gap: 15px; margin-bottom: 15px; font-size: 0.9rem; color: #555;">
+            <span>📅 [wpee_date]</span>
+            <span>📍 [wpee_location]</span>
+        </div>
+
+        <!-- Résumé -->
+        <div style="margin-bottom: 20px; color: #444; font-size: 0.95rem; line-height: 1.5;">
+            [wpee_excerpt]
+        </div>
+
+        <!-- Footer de carte -->
+        <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 15px;">
+            <span style="font-size: 0.85rem; color: #888;">
+                Places: <strong>[wpee_seats]</strong>
+            </span>
+            
+            <!-- Bouton "Voir" Custom -->
+            <a href="[wpee_event_url]" style="background: #2563eb; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-weight: 500; transition: background 0.2s;">
+                Réserver
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- ================================================================================== -->
+
+
+<!-- 2. EXEMPLE DE TEMPLATE DE FILTRE (Design "Barre Horizontale") -->
+<div style="background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
+    
+    <!-- Champ Recherche -->
+    <div style="flex-grow: 1; min-width: 200px;">
+        [wpee_input_search placeholder="Rechercher un concert, un atelier..."]
+    </div>
+
+    <!-- Tags en pastilles (Badges cliquables) -->
+    <div style="display: flex; gap: 5px;">
+        [wpee_filter_tag slug="musique" text="🎵 Musique"]
+        [wpee_filter_tag slug="sport" text="🏀 Sport"]
+        [wpee_filter_tag slug="art" text="🎨 Art"]
+    </div>
+
+    <!-- Bouton Valider -->
+    <div>
+        [wpee_filter_submit text="Rechercher"]
+    </div>
+
+    <!-- Reset -->
+    <div>
+        [wpee_filter_reset text="× Effacer"]
+    </div>
+</div>
